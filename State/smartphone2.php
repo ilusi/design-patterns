@@ -1,7 +1,6 @@
 <?php
 
 define(FORMATTER_SYS, '<br />' . '> ');
-define(PASSWORD, 'password');
 
 class SmartPhone
 {
@@ -40,9 +39,9 @@ class SmartPhone
         return $this->state;
     }
 
-    public function setPassword($flag)
+    public function setPassword($password)
     {
-        $this->password = (string) $flag;
+        $this->password = (string) $password;
 
         return $this;
     }

@@ -8,6 +8,7 @@ spl_autoload_register(function($className) {
 
 define(FORMATTER_ACTION, '<br />' . str_repeat('&nbsp;', 3) . '...');
 define(FORMATTER_TEST, '<br />' . str_repeat('&nbsp;', 3) . '* ');
+define(PASSWORD, 'password');
 
 class SmartPhoneTest
 {
@@ -64,6 +65,7 @@ class SmartPhoneTest
 
         $smartPhone = new SmartPhone();
         $smartPhone->setRequirePassword(true);
+        $smartPhone->setPassword(PASSWORD);
 
         self::displayStatus($smartPhone);
         self::pushButton($smartPhone);
@@ -80,6 +82,7 @@ class SmartPhoneTest
 
         $smartPhone = new SmartPhone();
         $smartPhone->setRequirePassword(true);
+        $smartPhone->setPassword(PASSWORD);
 
         self::displayStatus($smartPhone);
         self::pushButton($smartPhone);
@@ -97,6 +100,7 @@ class SmartPhoneTest
 
         $smartPhone = new SmartPhone();
         $smartPhone->setRequirePassword(true);
+        $smartPhone->setPassword(PASSWORD);
 
         self::displayStatus($smartPhone);
         self::pushButton($smartPhone);

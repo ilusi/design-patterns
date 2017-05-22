@@ -17,9 +17,6 @@
  * Create a strategy on the smart phone to handle its various internal states.
  */
 
-define(FORMATTER_SYS, '<br />' . '> ');
-define(PASSWORD, 'password');
-
 class SmartPhone
 {
     const STATE_OFF = 0;
@@ -32,6 +29,8 @@ class SmartPhone
 
     public function __construct()
     {
+        define(FORMATTER_SYS, '<br />' . '> ');
+
         $this->state = self::STATE_OFF;
         $this->requirePassword = false;
     }
@@ -48,9 +47,9 @@ class SmartPhone
         return $this->state;
     }
 
-    public function setPassword($flag)
+    public function setPassword($password)
     {
-        $this->password = (bool) $flag;
+        $this->password = (string) $password;
 
         return $this;
     }
