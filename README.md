@@ -1,4 +1,4 @@
-# design-patterns
+# Design Patterns
 
 **Session 1**
   - Introduction to DP & The Strategy Pattern
@@ -16,7 +16,7 @@
   - The State Pattern
 
   - Slide Show:
-      https://slides.com/ilusi/design-patterns
+      https://slides.com/ilusi/design-pattern-state
 
   - Code Examples (PHP):
       https://github.com/ilusi/design-patterns/tree/master/State
