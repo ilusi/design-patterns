@@ -4,18 +4,21 @@
  * Context
  * A smart phone device has a power button and a display screen. To conserve
  * the battery power, the smart phone needs to have features:
- * - power off the display when the power button is pressed
- * - power on the display when the power button is pressed
+ * - When the device is on, pressing the power button will turn it off
+ * - When the device is off, pressing the power button will turn it on
  *
  * For security purpose, it must have a locking mechanism.
  *
  * Problem
  * I need to accomodate the changing flow of the smart phone internal states
- * and provide a maintainable and flexible when adding new features.
+ * when the power button is pressed and provide a maintainable and flexible
+ * methods when adding new features.
  *
  * Solution
  * Create a strategy on the smart phone to handle its various internal states.
  */
+
+define(FORMATTER_SYS, '<br />' . '> ');
 
 class SmartPhone
 {
@@ -29,8 +32,6 @@ class SmartPhone
 
     public function __construct()
     {
-        define(FORMATTER_SYS, '<br />' . '> ');
-
         $this->state = self::STATE_OFF;
         $this->requirePassword = false;
     }
